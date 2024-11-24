@@ -1,25 +1,15 @@
-@media (max-width: 768px) {
-  body {
-      font-size: 14px;
-  }
-  .menu {
-      flex-direction: column;
-  }
-}
-
-
 /* Estilo geral */
 body {
-    margin: 0; /* Remove margens padrão */
-    font-family: Arial, sans-serif; /* Fonte básica */
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
-    display: flex; /* Ativa o flexbox */
-    flex-direction: column; /* Organiza header, conteúdo e footer em coluna */
+    margin: 0;                 /* remove margens padrão */
+    font-family: Arial, sans-serif;         /*tipo de fonte*/
+    min-height: 100vh;           /*garante que o body ocupe toda a altura da tela */
+    display: flex;              /* Ativa o flexbox */
+    flex-direction: column;     /*organiza header, conteúdo e footer em coluna */
   }
   
   /* Container principal */
   .container {
-    flex: 1; /* Faz o conteúdo  ocupar o espaço disponível */
+    flex: 1;                   /*faz o conteúdo  ocupar o espaço disponível */
     text-align: center;
     background: linear-gradient(180deg, #97daf5, #e0f7ff);
     height: 60vh;
@@ -31,78 +21,75 @@ body {
   margin: 0 auto;
   max-width: 90%;
   overflow-x: auto;
+  border-radius: 8px;         /*bordas arredondadas*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve*/
 }
-
-/* Estilo básico para a tabela */
 /* Estilo básico da tabela responsiva */
 .tabela .responsiva {
-  width: 100%; /* A tabela ocupará toda a largura disponível */
-  border-collapse: collapse; /* Remove espaços extras entre as células da tabela */
-  font-family: Arial, sans-serif; /* Define a fonte para o texto */
-  font-size: 1rem; /* Define o tamanho padrão da fonte */
-  color: #333; /* Define a cor do texto */
+  width: 100%;           /* a tabela ocupará toda a largura disponivel */
+  border-collapse: collapse;  /* remove espaços entre as células*/
+  font-family: Arial, sans-serif;  /*define a fonte para o texto */
+  font-size: 1rem;               /* define o tamanho padrão da fonte */
+  color: #333;             /*define a cor do texto */
 }
 
 /* Estilo para o título da tabela */
 .tabela .responsiva caption {
-  font-size: 1.5rem; /* Define o tamanho do texto do título */
-  font-weight: bold; /* Aplica negrito ao título */
+  font-size: 1.5rem;    /*tamanho do texto do título */
+  font-weight: bold; /* negrito no título */
   margin-bottom: 1rem; /* Adiciona espaçamento abaixo do título */
-  text-align: left; /* Alinha o título à esquerda */
+  text-align: center; /* Alinha o título no centro */
 }
 
-/* Estilo das células da tabela (cabeçalho e corpo) */
+      /* estilo das células da tabela (cabeçalho e corpo) */
 .tabela .responsiva th, 
 .tabela .responsiva td {
-  padding: 0.75rem; /* Adiciona espaçamento interno às células */
-  text-align: left; /* Alinha o texto das células à esquerda */
-  border: 1px solid #ddd; /* Adiciona borda fina e cinza ao redor das células */
+  padding: 0.75rem;      /* adiciona espaçamento interno às células */
+  text-align: left;      /* alinha o texto a esquerda */
+  border: 1px solid #ddd; /* Adiciona borda cinza as células */
 }
 
-/* Estilo específico para cabeçalhos */
+/* estilo específico para cabeçalhos */
 .tabela .responsiva th {
   background-color: #f4f4f4; /* Define uma cor de fundo clara para os cabeçalhos */
   font-weight: bold; /* Aplica negrito ao texto dos cabeçalhos */
 }
 
-/* Estilo responsivo para telas menores */
+/* estilo responsivo para telas menores */
 @media (max-width: 768px) {
-  /* Torna cabeçalhos e células exibidos como blocos */
-  .tabela .responsiva th,
+  .tabela .responsiva {
+      overflow-x: auto;        /*permitir rolagem horizontal em telas pequenas */
+  }
+
+  .tabela .responsiva th, 
   .tabela .responsiva td {
-      display: block; /* Exibe cada célula em uma nova linha */
-      text-align: right; /* Alinha o texto à direita */
-  }
-
-  /* Ajustes para cabeçalhos */
-  .tabela .responsiva th {
-      background-color: #fff; /* Remove o fundo colorido em telas pequenas */
-      text-align: left; /* Alinha os cabeçalhos à esquerda */
-      font-size: 0.9rem; /* Reduz o tamanho do texto dos cabeçalhos */
-  }
-
-  /* Adiciona rótulos às células usando o atributo data-label */
-  .tabela .responsiva td::before {
-      content: attr(data-label); /* Insere o valor do atributo data-label antes do conteúdo da célula */
-      float: left; /* Move o rótulo para a esquerda */
-      font-weight: bold; /* Aplica negrito ao rótulo */
-      text-transform: uppercase; /* Transforma o texto do rótulo para letras maiúsculas */
-  }
-
-  /* Ajuste de estilo para células em telas pequenas */
-  .tabela .responsiva td {
-      text-align: left; /* Alinha o texto da célula à esquerda */
-      border: none; /* Remove bordas laterais das células */
-      border-bottom: 1px solid #ddd; /* Adiciona uma linha divisória na parte inferior */
-      padding: 0.5rem; /* Reduz o espaçamento interno das células */
+      display: table-cell;    /* mantém o formato de tabela */
+      text-align: left;       /* alinha o texto à esquerda */
   }
 }
 
-/* Estilo para o contêiner do portfólio */
+       /* adiciona rótulos às células usando o atributo data-label */
+  .tabela .responsiva td::before {
+      content: attr(data-label); /* insere o valor do atributo data-label antes do conteúdo da célula */
+      float: left;               /* move o rótulo para a esquerda */
+      font-weight: bold;         /* aplica negrito ao rótulo */
+      text-transform: uppercase; /* transforma o texto do rótulo para letras maiúsculas */
+  }
+
+      /* ajuste de estilo para telas pequenas */
+  .tabela .responsiva td {
+      text-align: left;        /* alinhamento à esquerda */
+      border: none;            /* remove bordas laterais das células */
+      border-bottom: 1px solid #ddd;   /* coloca uma linha divisória na parte inferior */
+      padding: 0.5rem;     /* Reduz o espaçamento interno das células */
+  }
+}
+
+/* estilo do portfólio */
 .portfolio-container {
-  display: flex; /* Define que os itens do contêiner serão exibidos em um layout flexível */
-  flex-wrap: wrap; /* Permite que os itens "quebrem" para uma nova linha quando necessário */
-  justify-content: center; /* Centraliza os itens horizontalmente */
+  display: flex;   /* define que os itens do contêiner serão exibidos em um layout flexível */
+  flex-wrap: wrap; /* permite que os itens "quebrem" para uma nova linha quando necessário */
+  justify-content: center; /* centraliza os itens horizontalmente */
 }
 
 
