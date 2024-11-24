@@ -1,0 +1,257 @@
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+  .menu {
+      flex-direction: column;
+  }
+}
+
+
+/* Estilo geral */
+body {
+    margin: 0; /* Remove margens padrão */
+    font-family: Arial, sans-serif; /* Fonte básica */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza header, conteúdo e footer em coluna */
+  }
+  
+  /* Container principal */
+  .container {
+    flex: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+    text-align: center;
+    background: linear-gradient(180deg, #97daf5, #e0f7ff);
+    height: 60vh;
+  }
+  
+/* Garantir que a tabela ocupe a largura total do contêiner */
+.tabela {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo básico para a tabela */
+.tabela .responsiva {
+  width: 90%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.tabela .responsiva caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.tabela .responsiva th, 
+.tabela .responsiva td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.tabela .responsiva th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tabela .responsiva th,
+  .tabela .responsiva td {
+      display: block;
+      text-align: right;
+  }
+
+  .tabela .responsiva th {
+      background-color: #fff;
+      text-align: left;
+      font-size: 0.9rem;
+  }
+
+  .tabela .responsiva td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+
+  .tabela .responsiva td {
+      text-align: left;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      padding: 0.5rem;
+  }
+}
+.portfolio-container {
+  display: flex;             /* Estilos específicos para o portfólio */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-container p {
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+.portfolio-container a {
+  color: blue;
+text-decoration: none;
+font-size: 18px;
+transition: color 0.3s;
+}
+.portfolio-container a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+/* Estilo do header */
+header {
+  background-color: #0077cc; /* Fundo azul */
+  color: #ffffff; /* Texto branco */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  display: flex; /* Ativa flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 20px; /* Espaço entre a imagem e o conteúdo */
+}
+
+/* Estilo da imagem de perfil */
+header .foto-perfil {
+  width: 50px; /* Largura da imagem */
+  height: 50px; /* Altura da imagem */
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+/* Contêiner do título e menu */
+header div {
+  flex: 1; /* Faz o conteúdo ocupar todo o espaço restante */
+  display: flex; /* Ativa flexbox para o conteúdo interno */
+  flex-direction: column; /* Organiza os itens verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do título */
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo do menu */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Estilo dos links */
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+  
+  /* Estilo do main */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  main {
+    background: linear-gradient(180deg, #97daf5, #e0f7ff);
+    height: 60vh;
+  }
+
+table {
+    border-collapse: collapse;
+    
+}
+#responsiva {
+  overflow-x: auto;
+}
+caption {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px;
+}
+th, td{
+    border: 1px solid rgb(8, 50, 236);
+    padding: 10px;
+}
+td a {
+  color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+td a:hover {
+  color: #ffcc00;
+}
+ tbody tr:nth-child(odd){
+    background-color: antiquewhite;
+}
+tbody tr:nth-child(even){
+    background-color: lightgray;
+}
+  /* Estilo do footer */
+  footer {
+    background-color: #0077cc;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  footer nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  footer nav ul li a:hover {
+    transform: scale(1.2);
+  }
+  
+  footer p {
+    margin: 10px 0 0;
+    font-size: 14px;
+  }
+
+  footer p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  footer p a:hover {
+    color: #ffcc00;
+  }
+  
+  
