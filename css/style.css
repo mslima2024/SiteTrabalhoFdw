@@ -90,6 +90,7 @@ body {
   display: flex;   /* define que os itens do contêiner serão exibidos em um layout flexível */
   flex-wrap: wrap; /* permite que os itens "quebrem" para uma nova linha quando necessário */
   justify-content: center; /* centraliza os itens horizontalmente */
+  row-gap: 1rem;
 }
 
 
