@@ -87,9 +87,9 @@ body {
 
 /* estilo do portfólio */
 .portfolio-container {
-  display: flex;   /* define que os itens do contêiner serão exibidos em um layout flexível */
-  flex-wrap: wrap; /* permite que os itens "quebrem" para uma nova linha quando necessário */
-  justify-content: center; /* centraliza os itens horizontalmente */
+  display: flex;        /* define que os itens do contêiner serão exibidos em um layout flexível */
+  flex-wrap: wrap;       /* permite que os itens "quebrem" para uma nova linha quando necessário */
+  justify-content: center;     /* centraliza os itens horizontalmente */
   row-gap: 1rem;
 }
 
@@ -113,73 +113,76 @@ transition: color 0.3s;
 }
 /* Estilo do header */
 header {
-  background-color: #0077cc; /* Fundo azul */
-  color: #ffffff; /* Texto branco */
-  padding: 20px; /* Espaçamento interno */
+  background-color: #0077cc;      /* Fundo azul */
+  color: #ffffff;               /* Texto branco */
+  padding: 20px;                 /* Espaçamento interno */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
-  display: flex; /* Ativa flexbox */
-  align-items: center; /* Centraliza verticalmente */
-  gap: 20px; /* Espaço entre a imagem e o conteúdo */
+  display: flex;             /*ativa flexbox */
+  align-items: center;       /*centraliza verticalmente */
+  gap: 20px;                /*coloca espaço entre a imagem e o conteúdo */
 }
 
 /* Estilo da imagem de perfil */
+
 header .foto-perfil {
-  width: 50px; /* Largura da imagem */
-  height: 50px; /* Altura da imagem */
-  border-radius: 50%; /* Deixa a imagem redonda */
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  width: 50px;           /* largura da imagem */
+  height: 50px;     /*altura da imagem */
+  border-radius: 50%;      /*deixa a imagem redonda */
+  object-fit: cover;    /* ajusta a imagem sem distorcer */
 }
 
 /* Contêiner do título e menu */
+
 header div {
-  flex: 1; /* Faz o conteúdo ocupar todo o espaço restante */
-  display: flex; /* Ativa flexbox para o conteúdo interno */
-  flex-direction: column; /* Organiza os itens verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  text-align: center; /* Centraliza o texto */
+  flex: 1;             /*faz o conteúdo ocupar todo o espaço restante */
+  display: flex;      /* ativa flexbox para o conteúdo interno*/
+  flex-direction: column;   /* organiza os itens verticalmente */
+  align-items: center;      /* centraliza horizontalmente */
+  text-align: center;        /* centraliza o texto */
 }
 
 /* Estilo do título */
-header h1 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
+header h1 {    
+  margin: 0;          /*tira a margem padrão*/
+  font-size: 24px;    /*tamanho da fonte */
+  font-weight: bold;   /*fonte em negrito*/
 }
 
 /* Estilo do menu */
 header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  list-style: none;        /*remove os marcadores lista */
+  padding: 0;              /*eemove o preenchimento interno*/
+  margin: 10px 0 0;       /* margem superior de 10px */
+  display: flex;           /*define como flexbox para facilitar o alinhamento */
+  justify-content: center;     /*centraliza os itens horizontalmente */
+  gap: 20px;                /*espaçamento de 20px entre os itens da lista */
 }
 
 /* Estilo dos links */
 header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff;      /*cor branca na letra*/
+  text-decoration: none;   /*sem sublinhado*/
   font-size: 18px;
-  transition: color 0.3s;
+  transition: color 0.3s;  /*muda de cor suavemente*/
 }
 
 header nav ul li a:hover {
-  color: #ffcc00;
+  color: #ffcc00;         /*cor dourada ao passar o mouse */
 }
   
   /* Estilo do main */
   main {
-    padding: 20px;
-    text-align: center;
+    padding: 20px;       /*espaço interno*/
+    text-align: center;    /*centralizar texto*/
   }
   main {
-    background: linear-gradient(180deg, #97daf5, #e0f7ff);
-    height: 60vh;
+    background: linear-gradient(180deg, #97daf5, #e0f7ff);    /*fundo em gradiente*/
+    height: 60vh;    /*tamano de 60% da altura da janela */
   }
 
 table {
-    border-collapse: collapse;
+    border-collapse: collapse;    /*demais códigos são repetidos */
+  }
     
 }
 
@@ -209,7 +212,7 @@ tbody tr:nth-child(even){
 }
   /* Estilo do footer */
   footer {
-    background-color: #0077cc;
+    background-color: #0077cc; 
     color: #ffffff;
     padding: 20px;
     text-align: center;
